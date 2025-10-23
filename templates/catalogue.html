@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+
+<head>
+    <link rel="stylesheet" href="{{url_for( 'static', filename="css/catalogue.css" )}}">
+    <script src="{{url_for( 'static', filename='js/catalogue.js' )}}"> </script>
+</head>
+
+
+<body>
+    <div id="catalogue" class="catalogue">
+    
+    </div>
+</body>
+
+
+<footer>
+    <script type="text/javascript">
+        populateCatalogue({{catalogue|tojson}});
+    </script>
+</footer>
