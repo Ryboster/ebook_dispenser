@@ -9,6 +9,8 @@ EBOOKS_DIR = os.path.join(os.getcwd(), "media", "ebooks")
 THUMBNAILS_DIR = os.path.join(os.getcwd(), "media", "tmp")
 ALLOWED_EXTENSIONS = ["pdf"]
 
+os.makedirs(EBOOKS_DIR, exist_ok=True)
+os.makedirs(THUMBNAILS_DIR, exist_ok=True)
 
 app = Flask("Developer Portfolio", static_folder="static")
 app.config['MEDIA_FOLDER'] = os.path.join(os.getcwd(), "media")
